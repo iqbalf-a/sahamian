@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "idx-api",
+      "runtimeExecutable": "idx/.venv/Scripts/python.exe",
+      "runtimeArgs": ["-m", "uvicorn", "app.server:api", "--port", "8000", "--reload", "--reload-dir", "idx", "--app-dir", "idx"],
+      "port": 8000
+    },
+    {
+      "name": "idx-app",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "idx/dashboard"],
+      "port": 5173
+    }
+  ]
+}

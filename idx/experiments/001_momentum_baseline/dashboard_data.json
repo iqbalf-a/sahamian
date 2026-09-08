@@ -1,0 +1,887 @@
+{
+  "meta": {
+    "universe": "LQ45 (44 ticker, komposisi Agu-Okt 2026)",
+    "period": "2019-01 s/d 2023-12",
+    "vault_period": "2024-01 s/d 2026-09",
+    "vault_opened": true,
+    "capital0": 100000000.0
+  },
+  "kpi": {
+    "n_months": 60,
+    "final_capital": 213207104,
+    "total_return_pct": 113.2,
+    "cagr_pct": 16.3,
+    "pf": 1.81,
+    "win_rate_pct": 53.3,
+    "max_dd_pct": 38.7,
+    "avg_month_return_pct": 1.56,
+    "bh_total_return_pct": 51.4,
+    "bh_cagr_pct": 8.8,
+    "max_dd_p95_pct": 45.15,
+    "total_cost": 12156861,
+    "total_cost_pct": 12.2
+  },
+  "equity": {
+    "dates": [
+      "2019-01",
+      "2019-02",
+      "2019-03",
+      "2019-04",
+      "2019-05",
+      "2019-06",
+      "2019-07",
+      "2019-08",
+      "2019-09",
+      "2019-10",
+      "2019-11",
+      "2019-12",
+      "2020-01",
+      "2020-02",
+      "2020-03",
+      "2020-04",
+      "2020-05",
+      "2020-06",
+      "2020-07",
+      "2020-08",
+      "2020-09",
+      "2020-10",
+      "2020-11",
+      "2020-12",
+      "2021-01",
+      "2021-02",
+      "2021-03",
+      "2021-04",
+      "2021-05",
+      "2021-06",
+      "2021-07",
+      "2021-08",
+      "2021-09",
+      "2021-10",
+      "2021-11",
+      "2021-12",
+      "2022-01",
+      "2022-02",
+      "2022-03",
+      "2022-04",
+      "2022-05",
+      "2022-06",
+      "2022-07",
+      "2022-08",
+      "2022-09",
+      "2022-10",
+      "2022-11",
+      "2022-12",
+      "2023-01",
+      "2023-02",
+      "2023-03",
+      "2023-04",
+      "2023-05",
+      "2023-06",
+      "2023-07",
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12"
+    ],
+    "strategy": [
+      99800000,
+      96760702,
+      94116235,
+      95685424,
+      88059523,
+      92466245,
+      98513780,
+      100582812,
+      100382541,
+      100147284,
+      98882014,
+      101544396,
+      94971963,
+      84057881,
+      65608727,
+      65477510,
+      64920136,
+      62284940,
+      74878802,
+      79207984,
+      74594504,
+      84404692,
+      90111027,
+      113813615,
+      120676080,
+      128700447,
+      115030063,
+      121795001,
+      120545283,
+      125147569,
+      122731865,
+      114959228,
+      126478141,
+      126399464,
+      122787935,
+      125176098,
+      127408280,
+      132823525,
+      151395511,
+      170952890,
+      177011666,
+      151696985,
+      165976914,
+      179669120,
+      176917608,
+      196700928,
+      198762257,
+      186684950,
+      186571233,
+      180299357,
+      180863364,
+      182559565,
+      181117343,
+      181810393,
+      194720328,
+      194804285,
+      194514209,
+      198748308,
+      197362070,
+      213202611
+    ],
+    "benchmark": [
+      100000000,
+      97404668,
+      94805236,
+      95559708,
+      89702475,
+      94289629,
+      96265255,
+      95010415,
+      93699445,
+      94671900,
+      91898698,
+      96453088,
+      89374693,
+      80177052,
+      65739415,
+      74103855,
+      74177195,
+      77237792,
+      81688181,
+      84098692,
+      77328011,
+      82527959,
+      93240434,
+      108252103,
+      105784825,
+      113934387,
+      106955116,
+      110045269,
+      110017507,
+      109840883,
+      113092831,
+      111834347,
+      115067841,
+      121262031,
+      121482333,
+      124548969,
+      122536888,
+      128313144,
+      141301485,
+      156848485,
+      154622125,
+      138798957,
+      147592971,
+      158001934,
+      156274635,
+      163219351,
+      163451339,
+      155330699,
+      158191551,
+      159070754,
+      157031282,
+      156981748,
+      143255670,
+      149211888,
+      158776852,
+      162585178,
+      166773377,
+      152009053,
+      150041225,
+      151412418
+    ]
+  },
+  "yearly": [
+    {
+      "year": 2019,
+      "n_months": 12,
+      "pf": 1.15,
+      "win_rate": 41.7,
+      "net": 1544395,
+      "return_pct": 1.5
+    },
+    {
+      "year": 2020,
+      "n_months": 12,
+      "pf": 1.42,
+      "win_rate": 41.7,
+      "net": 12269218,
+      "return_pct": 12.1
+    },
+    {
+      "year": 2021,
+      "n_months": 12,
+      "pf": 1.5,
+      "win_rate": 50.0,
+      "net": 11362482,
+      "return_pct": 10.0
+    },
+    {
+      "year": 2022,
+      "n_months": 12,
+      "pf": 3.03,
+      "win_rate": 75.0,
+      "net": 61508851,
+      "return_pct": 49.1
+    },
+    {
+      "year": 2023,
+      "n_months": 12,
+      "pf": 3.75,
+      "win_rate": 58.3,
+      "net": 26517661,
+      "return_pct": 14.2
+    }
+  ],
+  "bootstrap": {
+    "Profit Factor": {
+      "observed": 1.805,
+      "ci_low": 0.863,
+      "ci_high": 4.114,
+      "prob_above": 0.9417
+    },
+    "Win Rate (%)": {
+      "observed": 53.333,
+      "ci_low": 40.0,
+      "ci_high": 66.667,
+      "prob_above": null
+    },
+    "Expectancy": {
+      "observed": 1.56,
+      "ci_low": -0.394,
+      "ci_high": 3.55,
+      "prob_above": 0.9417
+    }
+  },
+  "drawdown_permutation": {
+    "observed": 38.66,
+    "median": 31.55,
+    "p75": 36.76,
+    "p95": 45.15,
+    "p99": 50.65,
+    "max": 60.8,
+    "pct_worse_than_observed": 18.14
+  },
+  "periods": {
+    "explore": {
+      "metrics": {
+        "n_months": 60,
+        "final_capital": 213207104,
+        "total_return_pct": 113.2,
+        "cagr_pct": 16.3,
+        "pf": 1.81,
+        "win_rate_pct": 53.3,
+        "max_dd_pct": 38.7,
+        "avg_month_return_pct": 1.56
+      },
+      "yearly": [
+        {
+          "year": 2019,
+          "n_months": 12,
+          "pf": 1.15,
+          "win_rate": 41.7,
+          "net": 1544395,
+          "return_pct": 1.5
+        },
+        {
+          "year": 2020,
+          "n_months": 12,
+          "pf": 1.42,
+          "win_rate": 41.7,
+          "net": 12269218,
+          "return_pct": 12.1
+        },
+        {
+          "year": 2021,
+          "n_months": 12,
+          "pf": 1.5,
+          "win_rate": 50.0,
+          "net": 11362482,
+          "return_pct": 10.0
+        },
+        {
+          "year": 2022,
+          "n_months": 12,
+          "pf": 3.03,
+          "win_rate": 75.0,
+          "net": 61508851,
+          "return_pct": 49.1
+        },
+        {
+          "year": 2023,
+          "n_months": 12,
+          "pf": 3.75,
+          "win_rate": 58.3,
+          "net": 26517661,
+          "return_pct": 14.2
+        }
+      ],
+      "bootstrap": {
+        "Profit Factor": {
+          "observed": 1.805,
+          "ci_low": 0.863,
+          "ci_high": 4.114,
+          "prob_above": 0.9417
+        },
+        "Win Rate (%)": {
+          "observed": 53.333,
+          "ci_low": 40.0,
+          "ci_high": 66.667,
+          "prob_above": null
+        },
+        "Expectancy": {
+          "observed": 1.56,
+          "ci_low": -0.394,
+          "ci_high": 3.55,
+          "prob_above": 0.9417
+        }
+      },
+      "drawdown_permutation": {
+        "observed": 38.66,
+        "median": 31.55,
+        "p75": 36.76,
+        "p95": 45.15,
+        "p99": 50.65,
+        "max": 60.8,
+        "pct_worse_than_observed": 18.14
+      }
+    },
+    "vault": {
+      "metrics": {
+        "n_months": 33,
+        "final_capital": 170181777,
+        "total_return_pct": 70.2,
+        "cagr_pct": 21.3,
+        "pf": 1.82,
+        "win_rate_pct": 66.7,
+        "max_dd_pct": 49.0,
+        "avg_month_return_pct": 2.14
+      },
+      "yearly": [
+        {
+          "year": 2024,
+          "n_months": 12,
+          "pf": 3.04,
+          "win_rate": 58.3,
+          "net": 18982897,
+          "return_pct": 19.0
+        },
+        {
+          "year": 2025,
+          "n_months": 12,
+          "pf": 26.79,
+          "win_rate": 83.3,
+          "net": 164949074,
+          "return_pct": 138.6
+        },
+        {
+          "year": 2026,
+          "n_months": 9,
+          "pf": 0.42,
+          "win_rate": 55.6,
+          "net": -113752711,
+          "return_pct": -40.1
+        }
+      ],
+      "bootstrap": {
+        "Profit Factor": {
+          "observed": 1.825,
+          "ci_low": 0.698,
+          "ci_high": 7.569,
+          "prob_above": 0.8886
+        },
+        "Win Rate (%)": {
+          "observed": 66.667,
+          "ci_low": 51.515,
+          "ci_high": 81.818,
+          "prob_above": null
+        },
+        "Expectancy": {
+          "observed": 2.137,
+          "ci_low": -1.387,
+          "ci_high": 5.51,
+          "prob_above": 0.8886
+        }
+      },
+      "drawdown_permutation": {
+        "observed": 49.03,
+        "median": 34.21,
+        "p75": 39.69,
+        "p95": 48.25,
+        "p99": 53.44,
+        "max": 60.4,
+        "pct_worse_than_observed": 4.06
+      }
+    },
+    "combined": {
+      "metrics": {
+        "n_months": 93,
+        "final_capital": 354252191,
+        "total_return_pct": 254.3,
+        "cagr_pct": 17.7,
+        "pf": 1.79,
+        "win_rate_pct": 58.1,
+        "max_dd_pct": 49.0,
+        "avg_month_return_pct": 1.74
+      },
+      "yearly": [
+        {
+          "year": 2019,
+          "n_months": 12,
+          "pf": 1.15,
+          "win_rate": 41.7,
+          "net": 1544395,
+          "return_pct": 1.5
+        },
+        {
+          "year": 2020,
+          "n_months": 12,
+          "pf": 1.42,
+          "win_rate": 41.7,
+          "net": 12269218,
+          "return_pct": 12.1
+        },
+        {
+          "year": 2021,
+          "n_months": 12,
+          "pf": 1.5,
+          "win_rate": 50.0,
+          "net": 11362482,
+          "return_pct": 10.0
+        },
+        {
+          "year": 2022,
+          "n_months": 12,
+          "pf": 3.03,
+          "win_rate": 75.0,
+          "net": 61508851,
+          "return_pct": 49.1
+        },
+        {
+          "year": 2023,
+          "n_months": 12,
+          "pf": 3.75,
+          "win_rate": 58.3,
+          "net": 26517661,
+          "return_pct": 14.2
+        },
+        {
+          "year": 2024,
+          "n_months": 12,
+          "pf": 2.41,
+          "win_rate": 58.3,
+          "net": 34468094,
+          "return_pct": 16.2
+        },
+        {
+          "year": 2025,
+          "n_months": 12,
+          "pf": 26.79,
+          "win_rate": 83.3,
+          "net": 343352319,
+          "return_pct": 138.6
+        },
+        {
+          "year": 2026,
+          "n_months": 9,
+          "pf": 0.42,
+          "win_rate": 55.6,
+          "net": -236783730,
+          "return_pct": -40.1
+        }
+      ],
+      "bootstrap": {
+        "Profit Factor": {
+          "observed": 1.792,
+          "ci_low": 0.995,
+          "ci_high": 3.536,
+          "prob_above": 0.9737
+        },
+        "Win Rate (%)": {
+          "observed": 58.065,
+          "ci_low": 48.387,
+          "ci_high": 67.742,
+          "prob_above": null
+        },
+        "Expectancy": {
+          "observed": 1.74,
+          "ci_low": -0.015,
+          "ci_high": 3.5,
+          "prob_above": 0.9737
+        }
+      },
+      "drawdown_permutation": {
+        "observed": 49.03,
+        "median": 41.25,
+        "p75": 47.53,
+        "p95": 57.4,
+        "p99": 64.21,
+        "max": 79.43,
+        "pct_worse_than_observed": 20.55
+      }
+    }
+  },
+  "universe_stats": [
+    {
+      "ticker": "BBCA",
+      "n_days": 1232,
+      "daily_vol_pct": 1.55,
+      "avg_monthly_move_pct": 3.98,
+      "avg_daily_value_bn": 505.89
+    },
+    {
+      "ticker": "GOTO",
+      "n_days": 418,
+      "daily_vol_pct": 4.76,
+      "avg_monthly_move_pct": 20.27,
+      "avg_daily_value_bn": 470.74
+    },
+    {
+      "ticker": "BBRI",
+      "n_days": 1232,
+      "daily_vol_pct": 2.04,
+      "avg_monthly_move_pct": 6.07,
+      "avg_daily_value_bn": 449.14
+    },
+    {
+      "ticker": "AMMN",
+      "n_days": 121,
+      "daily_vol_pct": 3.73,
+      "avg_monthly_move_pct": 24.3,
+      "avg_daily_value_bn": 395.6
+    },
+    {
+      "ticker": "TLKM",
+      "n_days": 1231,
+      "daily_vol_pct": 1.82,
+      "avg_monthly_move_pct": 5.08,
+      "avg_daily_value_bn": 293.69
+    },
+    {
+      "ticker": "BMRI",
+      "n_days": 1232,
+      "daily_vol_pct": 2.1,
+      "avg_monthly_move_pct": 5.61,
+      "avg_daily_value_bn": 275.05
+    },
+    {
+      "ticker": "ANTM",
+      "n_days": 1232,
+      "daily_vol_pct": 3.19,
+      "avg_monthly_move_pct": 11.6,
+      "avg_daily_value_bn": 208.12
+    },
+    {
+      "ticker": "ASII",
+      "n_days": 1231,
+      "daily_vol_pct": 2.05,
+      "avg_monthly_move_pct": 6.77,
+      "avg_daily_value_bn": 181.94
+    },
+    {
+      "ticker": "BBNI",
+      "n_days": 1232,
+      "daily_vol_pct": 2.14,
+      "avg_monthly_move_pct": 7.55,
+      "avg_daily_value_bn": 178.99
+    },
+    {
+      "ticker": "MDKA",
+      "n_days": 1232,
+      "daily_vol_pct": 2.98,
+      "avg_monthly_move_pct": 10.69,
+      "avg_daily_value_bn": 167.16
+    },
+    {
+      "ticker": "ADMR",
+      "n_days": 485,
+      "daily_vol_pct": 5.21,
+      "avg_monthly_move_pct": 16.13,
+      "avg_daily_value_bn": 145.4
+    },
+    {
+      "ticker": "BUMI",
+      "n_days": 1232,
+      "daily_vol_pct": 3.8,
+      "avg_monthly_move_pct": 10.66,
+      "avg_daily_value_bn": 100.94
+    },
+    {
+      "ticker": "PGAS",
+      "n_days": 1231,
+      "daily_vol_pct": 2.73,
+      "avg_monthly_move_pct": 9.48,
+      "avg_daily_value_bn": 92.08
+    },
+    {
+      "ticker": "INCO",
+      "n_days": 1231,
+      "daily_vol_pct": 2.9,
+      "avg_monthly_move_pct": 9.78,
+      "avg_daily_value_bn": 86.5
+    },
+    {
+      "ticker": "BRPT",
+      "n_days": 1232,
+      "daily_vol_pct": 3.57,
+      "avg_monthly_move_pct": 13.1,
+      "avg_daily_value_bn": 77.8
+    },
+    {
+      "ticker": "PGEO",
+      "n_days": 201,
+      "daily_vol_pct": 3.77,
+      "avg_monthly_move_pct": 15.32,
+      "avg_daily_value_bn": 77.43
+    },
+    {
+      "ticker": "UNVR",
+      "n_days": 1232,
+      "daily_vol_pct": 2.02,
+      "avg_monthly_move_pct": 5.13,
+      "avg_daily_value_bn": 75.33
+    },
+    {
+      "ticker": "UNTR",
+      "n_days": 1231,
+      "daily_vol_pct": 2.49,
+      "avg_monthly_move_pct": 8.48,
+      "avg_daily_value_bn": 75.21
+    },
+    {
+      "ticker": "INKP",
+      "n_days": 1231,
+      "daily_vol_pct": 3.38,
+      "avg_monthly_move_pct": 10.98,
+      "avg_daily_value_bn": 65.54
+    },
+    {
+      "ticker": "ICBP",
+      "n_days": 1231,
+      "daily_vol_pct": 1.71,
+      "avg_monthly_move_pct": 5.02,
+      "avg_daily_value_bn": 59.54
+    },
+    {
+      "ticker": "ADRO",
+      "n_days": 1231,
+      "daily_vol_pct": 2.89,
+      "avg_monthly_move_pct": 9.0,
+      "avg_daily_value_bn": 59.38
+    },
+    {
+      "ticker": "MBMA",
+      "n_days": 167,
+      "daily_vol_pct": 2.79,
+      "avg_monthly_move_pct": 8.44,
+      "avg_daily_value_bn": 56.81
+    },
+    {
+      "ticker": "KLBF",
+      "n_days": 1232,
+      "daily_vol_pct": 2.13,
+      "avg_monthly_move_pct": 4.28,
+      "avg_daily_value_bn": 54.65
+    },
+    {
+      "ticker": "MEDC",
+      "n_days": 1232,
+      "daily_vol_pct": 3.55,
+      "avg_monthly_move_pct": 12.79,
+      "avg_daily_value_bn": 52.96
+    },
+    {
+      "ticker": "INDF",
+      "n_days": 1232,
+      "daily_vol_pct": 1.81,
+      "avg_monthly_move_pct": 4.61,
+      "avg_daily_value_bn": 50.06
+    },
+    {
+      "ticker": "CUAN",
+      "n_days": 193,
+      "daily_vol_pct": 6.65,
+      "avg_monthly_move_pct": 45.04,
+      "avg_daily_value_bn": 49.66
+    },
+    {
+      "ticker": "BBTN",
+      "n_days": 1232,
+      "daily_vol_pct": 2.5,
+      "avg_monthly_move_pct": 8.61,
+      "avg_daily_value_bn": 49.14
+    },
+    {
+      "ticker": "EXCL",
+      "n_days": 1232,
+      "daily_vol_pct": 2.72,
+      "avg_monthly_move_pct": 8.27,
+      "avg_daily_value_bn": 47.93
+    },
+    {
+      "ticker": "PTBA",
+      "n_days": 1231,
+      "daily_vol_pct": 2.63,
+      "avg_monthly_move_pct": 7.92,
+      "avg_daily_value_bn": 44.5
+    },
+    {
+      "ticker": "CPIN",
+      "n_days": 1231,
+      "daily_vol_pct": 2.68,
+      "avg_monthly_move_pct": 6.55,
+      "avg_daily_value_bn": 42.13
+    },
+    {
+      "ticker": "EMTK",
+      "n_days": 1232,
+      "daily_vol_pct": 3.55,
+      "avg_monthly_move_pct": 12.97,
+      "avg_daily_value_bn": 39.07
+    },
+    {
+      "ticker": "AMRT",
+      "n_days": 1232,
+      "daily_vol_pct": 2.53,
+      "avg_monthly_move_pct": 8.1,
+      "avg_daily_value_bn": 36.93
+    },
+    {
+      "ticker": "ITMG",
+      "n_days": 1232,
+      "daily_vol_pct": 2.71,
+      "avg_monthly_move_pct": 10.85,
+      "avg_daily_value_bn": 34.31
+    },
+    {
+      "ticker": "AKRA",
+      "n_days": 1232,
+      "daily_vol_pct": 2.7,
+      "avg_monthly_move_pct": 8.9,
+      "avg_daily_value_bn": 33.48
+    },
+    {
+      "ticker": "INDY",
+      "n_days": 1232,
+      "daily_vol_pct": 3.66,
+      "avg_monthly_move_pct": 11.79,
+      "avg_daily_value_bn": 33.45
+    },
+    {
+      "ticker": "JPFA",
+      "n_days": 1232,
+      "daily_vol_pct": 2.69,
+      "avg_monthly_move_pct": 8.72,
+      "avg_daily_value_bn": 28.1
+    },
+    {
+      "ticker": "ISAT",
+      "n_days": 1232,
+      "daily_vol_pct": 3.64,
+      "avg_monthly_move_pct": 12.93,
+      "avg_daily_value_bn": 27.83
+    },
+    {
+      "ticker": "WIFI",
+      "n_days": 733,
+      "daily_vol_pct": 3.24,
+      "avg_monthly_move_pct": 11.3,
+      "avg_daily_value_bn": 24.22
+    },
+    {
+      "ticker": "ESSA",
+      "n_days": 1231,
+      "daily_vol_pct": 4.09,
+      "avg_monthly_move_pct": 14.24,
+      "avg_daily_value_bn": 21.93
+    },
+    {
+      "ticker": "MAPI",
+      "n_days": 1231,
+      "daily_vol_pct": 2.88,
+      "avg_monthly_move_pct": 9.34,
+      "avg_daily_value_bn": 20.81
+    },
+    {
+      "ticker": "SCMA",
+      "n_days": 1232,
+      "daily_vol_pct": 3.11,
+      "avg_monthly_move_pct": 10.52,
+      "avg_daily_value_bn": 20.37
+    },
+    {
+      "ticker": "DEWA",
+      "n_days": 1232,
+      "daily_vol_pct": 2.48,
+      "avg_monthly_move_pct": 3.88,
+      "avg_daily_value_bn": 8.4
+    },
+    {
+      "ticker": "HRTA",
+      "n_days": 1231,
+      "daily_vol_pct": 3.07,
+      "avg_monthly_move_pct": 8.49,
+      "avg_daily_value_bn": 3.03
+    }
+  ],
+  "cost_table": [
+    {
+      "target_pct": 1,
+      "ratio_pct": 50.0,
+      "verdict": "tidak_layak"
+    },
+    {
+      "target_pct": 2,
+      "ratio_pct": 25.0,
+      "verdict": "tidak_layak"
+    },
+    {
+      "target_pct": 3,
+      "ratio_pct": 16.7,
+      "verdict": "tidak_layak"
+    },
+    {
+      "target_pct": 5,
+      "ratio_pct": 10.0,
+      "verdict": "berat"
+    },
+    {
+      "target_pct": 8,
+      "ratio_pct": 6.2,
+      "verdict": "berat"
+    },
+    {
+      "target_pct": 10,
+      "ratio_pct": 5.0,
+      "verdict": "berat"
+    },
+    {
+      "target_pct": 15,
+      "ratio_pct": 3.3,
+      "verdict": "aman"
+    },
+    {
+      "target_pct": 20,
+      "ratio_pct": 2.5,
+      "verdict": "aman"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# lingkungan Python
+idx/.venv/
+__pycache__/
+*.pyc
+
+# frontend
+idx/dashboard/node_modules/
+idx/dashboard/dist/
+
+# cache yang bisa dibuat ulang
+idx/data_actions/
+idx/data_news/
+
+# Catatan: idx/data/ dan idx/data_index/ SENGAJA tidak diabaikan.
+# Data yfinance bisa berubah diam-diam (revisi harga, penyesuaian dividen), jadi
+# menyimpannya membuat angka riset di experiments/ bisa direproduksi persis.

@@ -1,0 +1,330 @@
+{
+ "AADI": {
+  "name": "PT Adaro Andalan Indonesia Tbk",
+  "sector": "Energy"
+ },
+ "ADMR": {
+  "name": "PT Alamtri Minerals Indonesia Tbk",
+  "sector": "Basic Materials"
+ },
+ "ADRO": {
+  "name": "PT Alamtri Resources Indonesia Tbk",
+  "sector": "Energy"
+ },
+ "AKRA": {
+  "name": "PT AKR Corporindo Tbk",
+  "sector": "Energy"
+ },
+ "AMMN": {
+  "name": "PT Amman Mineral Internasional Tbk",
+  "sector": "Basic Materials"
+ },
+ "AMRT": {
+  "name": "PT Sumber Alfaria Trijaya Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "ANTM": {
+  "name": "PT Antam (Persero) Tbk",
+  "sector": "Basic Materials"
+ },
+ "ASII": {
+  "name": "PT Astra International Tbk",
+  "sector": "Industrials"
+ },
+ "BBCA": {
+  "name": "PT Bank Central Asia Tbk",
+  "sector": "Financial Services"
+ },
+ "BBNI": {
+  "name": "PT Bank Negara Indonesia (Persero) Tbk",
+  "sector": "Financial Services"
+ },
+ "BBRI": {
+  "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+  "sector": "Financial Services"
+ },
+ "BBTN": {
+  "name": "PT Bank Tabungan Negara (Persero) Tbk",
+  "sector": "Financial Services"
+ },
+ "BMRI": {
+  "name": "PT Bank Mandiri (Persero) Tbk",
+  "sector": "Financial Services"
+ },
+ "BRPT": {
+  "name": "PT Barito Pacific Tbk",
+  "sector": "Basic Materials"
+ },
+ "BUMI": {
+  "name": "PT Bumi Resources Tbk",
+  "sector": "Energy"
+ },
+ "CPIN": {
+  "name": "PT Charoen Pokphand Indonesia Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "CUAN": {
+  "name": "PT Petrindo Jaya Kreasi Tbk",
+  "sector": "Energy"
+ },
+ "DEWA": {
+  "name": "PT Darma Henwa Tbk",
+  "sector": "Energy"
+ },
+ "EMTK": {
+  "name": "PT Elang Mahkota Teknologi Tbk",
+  "sector": "Communication Services"
+ },
+ "ESSA": {
+  "name": "PT ESSA Industries Indonesia Tbk.",
+  "sector": "Basic Materials"
+ },
+ "EXCL": {
+  "name": "PT XLSMART Telecom Sejahtera Tbk",
+  "sector": "Communication Services"
+ },
+ "GOTO": {
+  "name": "PT GoTo Gojek Tokopedia Tbk",
+  "sector": "Technology"
+ },
+ "HRTA": {
+  "name": "PT Hartadinata Abadi Tbk",
+  "sector": "Consumer Cyclical"
+ },
+ "ICBP": {
+  "name": "PT Indofood CBP Sukses Makmur Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "INCO": {
+  "name": "PT Vale Indonesia Tbk",
+  "sector": "Basic Materials"
+ },
+ "INDF": {
+  "name": "PT Indofood Sukses Makmur Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "INDY": {
+  "name": "PT. Indika Energy Tbk",
+  "sector": "Energy"
+ },
+ "INKP": {
+  "name": "PT Indah Kiat Pulp & Paper Tbk",
+  "sector": "Basic Materials"
+ },
+ "ISAT": {
+  "name": "PT Indosat Tbk",
+  "sector": "Communication Services"
+ },
+ "ITMG": {
+  "name": "PT Indo Tambangraya Megah Tbk",
+  "sector": "Energy"
+ },
+ "JPFA": {
+  "name": "PT Japfa Comfeed Indonesia Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "KLBF": {
+  "name": "PT Kalbe Farma Tbk.",
+  "sector": "Healthcare"
+ },
+ "MAPI": {
+  "name": "PT. Mitra Adiperkasa Tbk",
+  "sector": "Consumer Cyclical"
+ },
+ "MBMA": {
+  "name": "PT Merdeka Battery Materials Tbk.",
+  "sector": "Basic Materials"
+ },
+ "MDKA": {
+  "name": "PT Merdeka Copper Gold Tbk",
+  "sector": "Basic Materials"
+ },
+ "MEDC": {
+  "name": "PT Medco Energi Internasional Tbk",
+  "sector": "Energy"
+ },
+ "MEDS": {
+  "name": "PT Hetzer Medical Indonesia Tbk",
+  "sector": "Healthcare"
+ },
+ "PGAS": {
+  "name": "PT Perusahaan Gas Negara (Persero) Tbk",
+  "sector": "Utilities"
+ },
+ "PGEO": {
+  "name": "PT Pertamina Geothermal Energy Tbk",
+  "sector": "Utilities"
+ },
+ "PTBA": {
+  "name": "PT Bukit Asam (Persero) Tbk",
+  "sector": "Energy"
+ },
+ "SCMA": {
+  "name": "PT Surya Citra Media Tbk",
+  "sector": "Communication Services"
+ },
+ "TLKM": {
+  "name": "Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk",
+  "sector": "Communication Services"
+ },
+ "UNTR": {
+  "name": "PT United Tractors Tbk",
+  "sector": "Basic Materials"
+ },
+ "UNVR": {
+  "name": "PT Unilever Indonesia Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "WIFI": {
+  "name": "PT Solusi Sinergi Digital Tbk",
+  "sector": "Communication Services"
+ },
+ "ACES": {
+  "name": "PT Aspirasi Hidup Indonesia Tbk",
+  "sector": "Consumer Cyclical"
+ },
+ "ARTO": {
+  "name": "PT Bank Jago Tbk",
+  "sector": "Financial Services"
+ },
+ "BFIN": {
+  "name": "PT BFI Finance Indonesia Tbk",
+  "sector": "Financial Services"
+ },
+ "BKSL": {
+  "name": "PT Sentul City Tbk",
+  "sector": "Real Estate"
+ },
+ "BRMS": {
+  "name": "PT Bumi Resources Minerals Tbk",
+  "sector": "Basic Materials"
+ },
+ "BSDE": {
+  "name": "PT Bumi Serpong Damai Tbk",
+  "sector": "Real Estate"
+ },
+ "BUKA": {
+  "name": "PT Bukalapak.com Tbk.",
+  "sector": "Consumer Cyclical"
+ },
+ "CBDK": {
+  "name": "PT Bangun Kosambi Sukses Tbk",
+  "sector": "Real Estate"
+ },
+ "CMRY": {
+  "name": "PT Cisarua Mountain Dairy Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "CTRA": {
+  "name": "PT Ciputra Development Tbk",
+  "sector": "Real Estate"
+ },
+ "DSNG": {
+  "name": "PT Dharma Satya Nusantara Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "ELSA": {
+  "name": "PT Elnusa Tbk",
+  "sector": "Energy"
+ },
+ "ENRG": {
+  "name": "PT Energi Mega Persada Tbk",
+  "sector": "Energy"
+ },
+ "ERAA": {
+  "name": "PT Erajaya Swasembada Tbk",
+  "sector": "Consumer Cyclical"
+ },
+ "GGRM": {
+  "name": "PT Gudang Garam Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "HEAL": {
+  "name": "PT Medikaloka Hermina Tbk",
+  "sector": "Healthcare"
+ },
+ "HRUM": {
+  "name": "PT Harum Energy Tbk",
+  "sector": "Basic Materials"
+ },
+ "JSMR": {
+  "name": "PT Jasa Marga (Persero) Tbk",
+  "sector": "Industrials"
+ },
+ "KIJA": {
+  "name": "PT Kawasan Industri Jababeka Tbk",
+  "sector": "Real Estate"
+ },
+ "KPIG": {
+  "name": "PT MNC Tourism Indonesia Tbk",
+  "sector": "Real Estate"
+ },
+ "LSIP": {
+  "name": "PT Perusahaan Perkebunan London Sumatra Indonesia Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "MAPA": {
+  "name": "PT Map Aktif Adiperkasa Tbk",
+  "sector": "Consumer Cyclical"
+ },
+ "MIKA": {
+  "name": "PT Mitra Keluarga Karyasehat Tbk",
+  "sector": "Healthcare"
+ },
+ "MYOR": {
+  "name": "PT Mayora Indah Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "NCKL": {
+  "name": "PT Trimegah Bangun Persada Tbk",
+  "sector": "Basic Materials"
+ },
+ "PNLF": {
+  "name": "PT Panin Financial Tbk",
+  "sector": "Financial Services"
+ },
+ "PTRO": {
+  "name": "PT Petrosea Tbk",
+  "sector": "Basic Materials"
+ },
+ "PWON": {
+  "name": "PT Pakuwon Jati Tbk",
+  "sector": "Real Estate"
+ },
+ "RAJA": {
+  "name": "PT Rukun Raharja Tbk",
+  "sector": "Utilities"
+ },
+ "RATU": {
+  "name": "PT Raharja Energi Cepu Tbk",
+  "sector": "Energy"
+ },
+ "SIDO": {
+  "name": "PT Industri Jamu dan Farmasi Sido Muncul Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "SMGR": {
+  "name": "PT Semen Indonesia (Persero) Tbk",
+  "sector": "Basic Materials"
+ },
+ "SMRA": {
+  "name": "PT Summarecon Agung Tbk",
+  "sector": "Real Estate"
+ },
+ "SSIA": {
+  "name": "PT Surya Semesta Internusa Tbk",
+  "sector": "Industrials"
+ },
+ "TAPG": {
+  "name": "PT Triputra Agro Persada Tbk",
+  "sector": "Consumer Defensive"
+ },
+ "TOWR": {
+  "name": "PT Sarana Menara Nusantara Tbk.",
+  "sector": "Real Estate"
+ },
+ "TPIA": {
+  "name": "PT Chandra Asri Pacific Tbk",
+  "sector": "Basic Materials"
+ }
+}
