@@ -15,9 +15,9 @@ screener templates, only one beat passive buy-and-hold.
 
 ## Running the app
 
-### Double-click `JALANKAN.bat`
+### Double-click `START.bat`
 
-That's it. (`jalankan` is Indonesian for *run*.) The script handles everything:
+That's it. The script handles everything:
 
 1. Checks that Python and Node.js are installed — and points you to the downloads if not
 2. Sets up the Python environment and frontend dependencies — **automatic, first run only**
@@ -29,13 +29,13 @@ That's it. (`jalankan` is Indonesian for *run*.) The script handles everything:
 Two small windows appear in the taskbar (**Server Data** and **Server Tampilan** — the data and
 UI servers). **Leave them open** while using the app; they are the engine behind it.
 
-**To stop:** double-click `HENTIKAN.bat` (*hentikan* = stop).
+**To stop:** double-click `STOP.bat`.
 
 On a first run, steps 2–3 take roughly five minutes. Every run after that takes seconds.
 
 ### Alternative: start the servers manually
 
-Useful if you want to watch the logs, or if `JALANKAN.bat` misbehaves. Open **two** Command
+Useful if you want to watch the logs, or if `START.bat` misbehaves. Open **two** Command
 Prompt or PowerShell windows.
 
 **Window 1** — backend:
@@ -140,7 +140,7 @@ tick **Add Python to PATH** during setup — and [Node.js](https://nodejs.org/).
 
 ## First-time setup (if `.venv` or `node_modules` are missing)
 
-`JALANKAN.bat` does this automatically. To do it by hand:
+`START.bat` does this automatically. To do it by hand:
 
 ```
 cd idx
@@ -228,8 +228,8 @@ than inventing a cause.
 
 ```
 sahamian/
-├── JALANKAN.bat           double-click to start the app
-├── HENTIKAN.bat           double-click to stop it
+├── START.bat              double-click to start the app
+├── STOP.bat               double-click to stop it
 ├── README.md              this file
 ├── METHODOLOGY.md         research methodology — read sections 1 and 4 if short on time
 ├── FINDINGS.md            full results of the forex study the methodology came from

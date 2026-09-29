@@ -108,7 +108,7 @@ echo   Dua jendela kecil terbuka di taskbar
 echo   ^(Server Data ^& Server Tampilan^).
 echo   JANGAN ditutup selama memakai aplikasi.
 echo.
-echo   Untuk berhenti: jalankan HENTIKAN.bat
+echo   Untuk berhenti: jalankan STOP.bat
 echo  ============================================
 echo.
 echo  Jendela ini akan tertutup sendiri.

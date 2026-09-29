@@ -33,6 +33,6 @@ if "!found!"=="1" (
 echo.
 echo  Catatan: kalau "netstat" masih menampilkan port 8000 sebagai TIME_WAIT,
 echo  itu normal dan hilang sendiri dalam beberapa menit. Tidak menghalangi
-echo  JALANKAN.bat dipakai lagi.
+echo  START.bat dipakai lagi.
 echo.
 ping -n 5 127.0.0.1 >nul 2>nul
