@@ -1,7 +1,8 @@
-# Analisis Saham IDX — Aplikasi & Riset Kuantitatif
+# Sahamian
 
-Aplikasi analisis saham Indonesia (screener, chart, backtest, kalender) yang dibangun di atas
-riset kuantitatif yang metodologinya diwarisi dari riset EA forex sebelumnya.
+Aplikasi analisis saham Indonesia (IDX) — screener, chart, backtest, dan kalender — yang
+dibangun di atas riset kuantitatif dengan metodologi yang diwarisi dari riset EA forex
+sebelumnya.
 
 Yang membedakan proyek ini dari kebanyakan alat screener: **setiap strategi di sini sudah
 di-backtest, dan yang gagal tetap ditampilkan beserta angka kegagalannya.** Dari tujuh template
@@ -38,14 +39,14 @@ Command Prompt / PowerShell:
 **Jendela 1** — server data:
 
 ```
-cd D:\github-repos\quant-research\idx
+cd D:\github-repos\sahamian\idx
 .venv\Scripts\python.exe -m uvicorn app.server:api --port 8000 --reload
 ```
 
 **Jendela 2** — server tampilan:
 
 ```
-cd D:\github-repos\quant-research\idx\dashboard
+cd D:\github-repos\sahamian\idx\dashboard
 npm run dev
 ```
 
@@ -85,7 +86,7 @@ hari libur panjang meski datanya sebenarnya sudah paling baru. Itu sebabnya teks
 Kalau lebih suka lewat terminal:
 
 ```
-cd D:\github-repos\quant-research\idx
+cd D:\github-repos\sahamian\idx
 .venv\Scripts\python.exe download_data.py
 .venv\Scripts\python.exe download_extra.py
 ```
@@ -140,7 +141,7 @@ Belum terpasang atau belum masuk PATH. Pasang [Python 3.11+](https://www.python.
 Jalankan berurutan dari Command Prompt:
 
 ```
-cd D:\github-repos\quant-research\idx
+cd D:\github-repos\sahamian\idx
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
@@ -226,7 +227,7 @@ bukan mengarang sebab.
 ## Struktur folder
 
 ```
-quant-research/
+sahamian/
 ├── JALANKAN.bat           ← klik dua kali untuk menjalankan aplikasi
 ├── HENTIKAN.bat           ← klik dua kali untuk menghentikannya
 ├── README.md              file ini

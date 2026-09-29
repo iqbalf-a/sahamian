@@ -171,7 +171,7 @@ Return per tahun: 2019 +1,5% · 2020 +12,1% · 2021 +10,0% · 2022 +49,1% · 202
 - [x] Hitung rasio biaya
 - [x] Strategi baseline #1 (momentum) — screening + multi-periode + bootstrap
 - [x] Buka brankas (SEKALI — dilakukan 2026-09-07, hasil di tabel di atas)
-- [x] Aplikasi analisis (screener + detail saham + lab backtest) — `quant-research/idx/app` + `dashboard`
+- [x] Aplikasi analisis (screener + detail saham + lab backtest) — `sahamian/idx/app` + `dashboard`
 - [x] Walk-forward bergulir untuk exp 001 (exp 002)
 - [x] Sensitivitas parameter + uji tuning-vs-patokan (exp 002)
 - [ ] **Tetapkan brankas BARU** — brankas lama sudah terpakai. Kandidat: data 2027 ke depan,

@@ -352,7 +352,7 @@ dengan struktur biaya IDX.
 
 ## 4.8 Langkah pertama yang disarankan di sesi baru
 
-1. Buat `quant-research/idx/experiments/SETUP.md`, isi harness dari 4.6, **kunci brankas**.
+1. Buat `sahamian/idx/experiments/SETUP.md`, isi harness dari 4.6, **kunci brankas**.
 2. Tarik data universe via yfinance; **verifikasi penyesuaian split/dividen**.
 3. Hitung statistik dasar universe: volatilitas harian rata-rata, rata-rata pergerakan bulanan.
 4. **Hitung rasio biaya** (aturan 1.3) untuk beberapa kandidat target profit — putuskan target

@@ -31,7 +31,7 @@ export default function App() {
       <header style={{ borderBottom: "1px solid var(--border)", background: "var(--panel)", position: "sticky", top: 0, zIndex: 20 }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 20px", display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
           <div style={{ padding: "14px 0", fontWeight: 600, fontSize: 14, whiteSpace: "nowrap" }}>
-            Analisis Saham <span style={{ color: "var(--accent)" }}>IDX</span>
+            Saham<span style={{ color: "var(--accent)" }}>ian</span>
           </div>
           <nav style={{ display: "flex", gap: 2 }}>
             {TABS.map((t) => (

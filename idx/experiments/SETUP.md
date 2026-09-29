@@ -66,7 +66,7 @@ agar rasio biaya tetap di bawah ~5%.
 ## Struktur file
 
 ```
-quant-research/idx/
+sahamian/idx/
   experiments/
     SETUP.md       <- file ini
     INDEX.md       <- log eksperimen (dibuat berikutnya)

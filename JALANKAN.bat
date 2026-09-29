@@ -1,11 +1,11 @@
 @echo off
 setlocal
-title Analisis Saham IDX
+title Sahamian
 cd /d "%~dp0"
 
 echo.
 echo  ============================================
-echo   ANALISIS SAHAM IDX
+echo   SAHAMIAN  -  Analisis Saham IDX
 echo  ============================================
 echo.
 

@@ -1,8 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
-title Hentikan Analisis Saham IDX
+title Hentikan Sahamian
 echo.
-echo  Menghentikan server Analisis Saham IDX...
+echo  Menghentikan server Sahamian...
 echo.
 
 set found=0
