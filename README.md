@@ -1,112 +1,114 @@
 # Sahamian
 
-Aplikasi analisis saham Indonesia (IDX) — screener, chart, backtest, dan kalender — yang
-dibangun di atas riset kuantitatif dengan metodologi yang diwarisi dari riset EA forex
-sebelumnya.
+An Indonesian stock (IDX) analysis app — screener, charts, backtesting, and a returns
+calendar — built on top of quantitative research that inherits its methodology from an earlier
+forex EA study.
 
-Yang membedakan proyek ini dari kebanyakan alat screener: **setiap strategi di sini sudah
-di-backtest, dan yang gagal tetap ditampilkan beserta angka kegagalannya.** Dari tujuh template
-screener, hanya satu yang terbukti mengalahkan beli-tahan pasif.
+What sets this apart from most screeners: **every strategy here has been backtested, and the
+ones that failed are still shown along with the numbers proving they failed.** Out of seven
+screener templates, only one beat passive buy-and-hold.
+
+> The application interface is in Indonesian, since it targets the Indonesian market. This
+> documentation is in English.
 
 ---
 
-## Cara menjalankan
+## Running the app
 
-### Klik dua kali `JALANKAN.bat`
+### Double-click `JALANKAN.bat`
 
-Itu saja. File itu mengurus semuanya:
+That's it. (`jalankan` is Indonesian for *run*.) The script handles everything:
 
-1. Cek Python & Node.js sudah terpasang (kalau belum, diberi tahu link unduhannya)
-2. Menyiapkan Python environment dan dependensi tampilan — **otomatis, hanya sekali**
-3. Menarik data harga saham kalau belum ada
-4. Menghentikan sisa server lama yang masih nyangkut
-5. Menjalankan kedua server
-6. Membuka browser ke aplikasinya
+1. Checks that Python and Node.js are installed — and points you to the downloads if not
+2. Sets up the Python environment and frontend dependencies — **automatic, first run only**
+3. Downloads price data if none exists yet
+4. Frees up ports left behind by previous runs
+5. Starts both servers
+6. Opens the browser
 
-Dua jendela kecil akan muncul di taskbar (**Server Data** dan **Server Tampilan**).
-**Jangan ditutup** selama memakai aplikasi — itu mesin yang menjalankan semuanya.
+Two small windows appear in the taskbar (**Server Data** and **Server Tampilan** — the data and
+UI servers). **Leave them open** while using the app; they are the engine behind it.
 
-**Untuk berhenti:** klik dua kali `HENTIKAN.bat`.
+**To stop:** double-click `HENTIKAN.bat` (*hentikan* = stop).
 
-Kalau baru pertama kali, langkah 2–3 butuh ~5 menit. Setelah itu tiap kali dijalankan hanya
-butuh beberapa detik.
+On a first run, steps 2–3 take roughly five minutes. Every run after that takes seconds.
 
-### Alternatif: jalankan manual
+### Alternative: start the servers manually
 
-Kalau ingin melihat log-nya langsung atau `JALANKAN.bat` bermasalah, buka **dua** jendela
-Command Prompt / PowerShell:
+Useful if you want to watch the logs, or if `JALANKAN.bat` misbehaves. Open **two** Command
+Prompt or PowerShell windows.
 
-**Jendela 1** — server data:
+**Window 1** — backend:
 
 ```
-cd D:\github-repos\sahamian\idx
+cd idx
 .venv\Scripts\python.exe -m uvicorn app.server:api --port 8000 --reload
 ```
 
-**Jendela 2** — server tampilan:
+**Window 2** — frontend:
 
 ```
-cd D:\github-repos\sahamian\idx\dashboard
+cd idx\dashboard
 npm run dev
 ```
 
-Lalu buka **http://localhost:5173**. Hentikan dengan `Ctrl + C` di masing-masing jendela.
+Then open **http://localhost:5173**. Stop either server with `Ctrl + C`.
 
-> ⚠️ Pakai backslash `\`, bukan garis miring `/`. Command Prompt menolak
-> `.venv/Scripts/python.exe` dengan pesan `'.venv' is not recognized as an internal or
-> external command`.
+> ⚠️ On Windows, use backslashes `\`, not forward slashes `/`. Command Prompt rejects
+> `.venv/Scripts/python.exe` with `'.venv' is not recognized as an internal or external
+> command`. PowerShell accepts both, but backslashes work everywhere.
 
-> Kalau memakai Claude Code, kedua server terdaftar di `.claude/launch.json` sebagai
-> `idx-api` dan `idx-app`.
+> If you use Claude Code, both servers are registered in `.claude/launch.json` as `idx-api`
+> and `idx-app`.
 
 ---
 
-## Data harga: pemberitahuan & tombol perbarui
+## Price data: staleness warning and refresh button
 
-Data harga disimpan sebagai file CSV di komputer Anda, **tidak** ikut segar dengan sendirinya.
+Price data lives in CSV files on your machine and **does not refresh on its own**.
 
-Aplikasi mengeceknya otomatis setiap kali dibuka. Kalau tertinggal, muncul banner di bagian
-atas:
+The app checks on every load. If the data has fallen behind, a banner appears at the top:
 
-> **Data yang tampil bukan yang terbaru**
+> **Data yang tampil bukan yang terbaru** *(the data shown is not current)*
 > Data terakhir 7 Sep 2026 (22 hari lalu) — tertinggal 15 hari bursa
 > [ **Perbarui sekarang** ] [ Nanti saja ]
 
-Klik **Perbarui sekarang**, lalu tunggu — progresnya tampil langsung (`52 dari 83 · BBRI`).
-Untuk 82 saham butuh ~2 menit. Setelah selesai, klik **Muat ulang tampilan**.
+Click **Perbarui sekarang** (*refresh now*) and watch the progress counter (`52 dari 83 · BBRI`).
+Refreshing all 82 tickers takes about two minutes. When it finishes, click **Muat ulang
+tampilan** to reload the view.
 
-Banner hanya muncul kalau memang tertinggal; kalau data sudah segar, ia tidak mengganggu.
+The banner only appears when the data is actually behind; it stays out of the way otherwise.
 
-Cara menghitungnya: aplikasi membandingkan tanggal data terakhir dengan hari bursa terakhir
-yang wajar sudah ada (Senin–Jumat, dan hari ini baru dihitung setelah jam 17.00 karena bursa
-tutup 15.49 WIB). Hari libur nasional tidak diketahui aplikasi — jadi banner bisa muncul di
-hari libur panjang meski datanya sebenarnya sudah paling baru. Itu sebabnya teksnya menyebut
-"data terakhir tanggal sekian", bukan mengklaim data pasti basi.
+How staleness is determined: the app compares the newest date in your data against the most
+recent trading day that *should* have data — weekdays only, and today only counts after 17:00,
+since the exchange closes at 15:49 WIB. Public holidays are unknown to the app, so the banner
+can appear during a long holiday even when your data is already current. That is why the
+wording says "last data from *date*" rather than claiming the data is definitely stale.
 
-Kalau lebih suka lewat terminal:
+You can also refresh from a terminal:
 
 ```
-cd D:\github-repos\sahamian\idx
+cd idx
 .venv\Scripts\python.exe download_data.py
 .venv\Scripts\python.exe download_extra.py
 ```
 
 ---
 
-## Kalau muncul error
+## Troubleshooting
 
 ### `'.venv' is not recognized as an internal or external command`
 
-Anda memakai garis miring `/` di Command Prompt. Ganti jadi backslash:
+You used forward slashes in Command Prompt. Switch to backslashes:
 
-| ❌ Salah | ✅ Benar |
+| ❌ Wrong | ✅ Right |
 |---|---|
 | `.venv/Scripts/python.exe` | `.venv\Scripts\python.exe` |
 
 ### `[WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions`
 
-Port 8000 **sudah dipakai program lain** — biasanya server yang belum ditutup dari percobaan
-sebelumnya. Cari dan hentikan prosesnya lewat PowerShell:
+Port 8000 is **already taken** — usually a server left running from an earlier attempt. Find
+the process in PowerShell:
 
 ```powershell
 Get-NetTCPConnection -LocalPort 8000 -State Listen | ForEach-Object {
@@ -115,38 +117,38 @@ Get-NetTCPConnection -LocalPort 8000 -State Listen | ForEach-Object {
 }
 ```
 
-Setelah tahu PID-nya dan yakin itu memang server lama Anda:
+Once you have the PID and you are sure it is your own stale server:
 
 ```powershell
 Stop-Process -Id <PID> -Force
 ```
 
-Atau pakai port lain: ganti `--port 8000` jadi `--port 8001`, lalu ubah juga tujuan proxy di
-`idx/dashboard/vite.config.js` agar menunjuk ke port yang sama.
+Or use a different port: change `--port 8000` to `--port 8001`, and update the proxy target in
+`idx/dashboard/vite.config.js` to match.
 
-### `Failed to fetch` / halaman kosong / tabel tidak terisi
+### `Failed to fetch`, blank page, or empty tables
 
-Backend belum jalan atau sudah mati. Cek Terminal 1 masih hidup, lalu buka
-**http://localhost:8000/api/health** di browser — harusnya muncul `{"ok":true,"tickers":82}`.
+The backend is not running. Check that window 1 is still alive, then open
+**http://localhost:8000/api/health** — it should return `{"ok":true,"tickers":82}`.
 
-### `python` atau `npm` tidak dikenali
+### `python` or `npm` not recognized
 
-Belum terpasang atau belum masuk PATH. Pasang [Python 3.11+](https://www.python.org/downloads/)
-(centang **Add Python to PATH** saat memasang) dan [Node.js](https://nodejs.org/).
+Not installed, or not on PATH. Install [Python 3.11+](https://www.python.org/downloads/) —
+tick **Add Python to PATH** during setup — and [Node.js](https://nodejs.org/).
 
 ---
 
-## Setup pertama kali (kalau `.venv` atau `node_modules` belum ada)
+## First-time setup (if `.venv` or `node_modules` are missing)
 
-Jalankan berurutan dari Command Prompt:
+`JALANKAN.bat` does this automatically. To do it by hand:
 
 ```
-cd D:\github-repos\sahamian\idx
+cd idx
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-Lalu tarik datanya (butuh beberapa menit, perlu koneksi internet):
+Then fetch the data (a few minutes, needs an internet connection):
 
 ```
 .venv\Scripts\python.exe download_data.py
@@ -154,133 +156,135 @@ Lalu tarik datanya (butuh beberapa menit, perlu koneksi internet):
 .venv\Scripts\python.exe build_ticker_names.py
 ```
 
-Terakhir, dependensi frontend:
+Finally, the frontend dependencies:
 
 ```
 cd dashboard
 npm install
 ```
 
-Setelah itu kembali ke bagian **Cara menjalankan** di atas.
-
 ---
 
-## Isi aplikasi
+## What's in the app
 
-| Tab | Isi |
+| Tab | Contents |
 |---|---|
-| **Utama** | IHSG, deteksi pergerakan tidak wajar + berita terkait, dan daftar top gainer / loser / trending / teraktif / dekat tertinggi–terendah 52 minggu |
-| **Screener** | 7 template strategi, masing-masing dengan status hasil ujinya |
-| **Kalender** | Heatmap untung-rugi harian, per halaman 2 bulan. Default IHSG, bisa diganti ke saham manapun |
-| **Lab backtest** | Backtest strategi momentum dengan parameter yang bisa diatur |
-| **Sensitivitas** | Walk-forward bergulir + grid 36 kombinasi parameter |
-| **Riset** | Laporan lengkap eksperimen 001 |
+| **Utama** (Home) | IHSG index, unusual-move detection with matching news, and top gainers / losers / trending / most active / near 52-week high and low |
+| **Screener** | Seven strategy templates, each labelled with its test result |
+| **Kalender** (Calendar) | Daily profit/loss heatmap, two months per page. Defaults to the IHSG index; switchable to any stock |
+| **Lab backtest** | Momentum strategy backtest with adjustable parameters |
+| **Sensitivitas** | Rolling walk-forward plus a 36-cell parameter grid |
+| **Riset** (Research) | Full report for experiment 001 |
 
-**Detail saham** dibuka dengan mengklik baris tabel atau lewat kotak pencarian di kanan atas
-(bisa cari dengan kode **atau** nama perusahaan — ketik "bank" atau "asuransi"). Isinya: panel
-ringkasan, chart garis/candle dengan SMA20/50/200 + RSI (bisa diperbesar), penilaian terhadap
-kriteria strategi, kelayakan target profit di harga sekarang, dan corporate action.
+**Stock detail** opens by clicking any table row, or through the search box in the top right —
+which matches on ticker **or** company name, so typing "bank" or "asuransi" works. It shows a
+summary panel, a line or candlestick chart with SMA20/50/200 and RSI (expandable), an
+assessment against the strategy's criteria, profit-target feasibility at the current price, and
+corporate actions.
 
-Saham di luar 82 yang tersimpan bisa ditarik langsung dari aplikasi — pilih dari hasil
-pencarian, datanya otomatis diambil dari yfinance.
+Stocks outside the 82 stored locally can be pulled in from the app itself — pick one from the
+search results and its data is fetched from yfinance automatically.
 
 ---
 
-## Status tiap strategi
+## Strategy status
 
-| Template | Status | Angka |
+| Template | Status | Numbers |
 |---|---|---|
-| Momentum lintas saham | ✅ tervalidasi sebagian | CAGR +16,3% vs buy&hold +8,8% (2019–2023) |
-| Beli sore → jual pagi | ❌ gagal: biaya | efek kotor nyata (+0,27%/hari) tapi 0 dari 44 saham bersihnya positif |
-| Beli pagi → jual sore | ❌ gagal: sinyal | −0,17%/hari bahkan sebelum biaya |
-| Akumulasi (proxy bandarmology) | ❌ gagal: backtest | +1,6%, PF 1,17 |
-| Breakout konsolidasi | ❌ gagal: backtest | −5,7%, PF 0,83 |
-| Trend-following | ❌ gagal: backtest | −1,9%, PF 1,05 |
-| Koreksi dalam tren naik | ❌ gagal: backtest | −0,4%, win rate bulanan 35% |
+| Cross-sectional momentum | ✅ partially validated | CAGR +16.3% vs +8.8% buy-and-hold (2019–2023) |
+| Buy at close → sell at open | ❌ failed: costs | real gross edge (+0.27%/day) but 0 of 44 stocks net positive |
+| Buy at open → sell at close | ❌ failed: signal | −0.17%/day even before costs |
+| Accumulation (bandarmology proxy) | ❌ failed: backtest | +1.6%, PF 1.17 |
+| Consolidation breakout | ❌ failed: backtest | −5.7%, PF 0.83 |
+| Trend-following | ❌ failed: backtest | −1.9%, PF 1.05 |
+| Pullback in an uptrend | ❌ failed: backtest | −0.4%, 35% monthly win rate |
 
-Detail pengujiannya di [`idx/experiments/`](idx/experiments/INDEX.md).
+Test details are in [`idx/experiments/`](idx/experiments/INDEX.md).
 
-⚠️ Bahkan strategi momentum **belum layak dipakai dengan uang sungguhan**: drawdown persentil 95
-mencapai 57%, dan tahun 2026 turun −40,1% setelah 2025 naik +138,6%. Belum pernah dijalankan di
-akun nyata.
+⚠️ Even the momentum strategy is **not ready for real money**: its 95th-percentile drawdown
+reaches 57%, and 2026 fell −40.1% after 2025 gained +138.6%. It has never been traded live.
 
 ---
 
-## Fitur AI (opsional, perlu kunci API)
+## AI feature (optional, needs an API key)
 
-Panel di tab Utama mendeteksi saham yang bergerak >2 simpangan baku dari volatilitasnya sendiri,
-lalu mencocokkannya dengan judul berita dari RSS (CNBC Indonesia, Kontan, IDX Channel). Bagian
-statistik dan berita **selalu jalan tanpa kunci apapun**.
+The panel on the Home tab flags stocks moving more than two standard deviations beyond their own
+volatility, then matches them against RSS headlines from CNBC Indonesia, Kontan, and IDX Channel.
+**The statistics and headlines work without any API key.**
 
-Analisis AI-nya opsional. Untuk mengaktifkan:
+The AI commentary is optional. To enable it:
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...    # atau set di Windows: setx ANTHROPIC_API_KEY "sk-ant-..."
+export ANTHROPIC_API_KEY=sk-ant-...      # Windows: setx ANTHROPIC_API_KEY "sk-ant-..."
 ```
 
-lalu jalankan ulang server API. Prompt-nya dikunci agar model **hanya** memakai judul berita yang
-benar-benar diambil, dan wajib menyatakan "tidak ada berita yang menjelaskan" kalau tidak ketemu —
-bukan mengarang sebab.
+Then restart the API server. The prompt is deliberately constrained: the model may only use the
+headlines actually fetched, and must say "no headline explains this" when none matches, rather
+than inventing a cause.
 
 ---
 
-## Struktur folder
+## Project layout
 
 ```
 sahamian/
-├── JALANKAN.bat           ← klik dua kali untuk menjalankan aplikasi
-├── HENTIKAN.bat           ← klik dua kali untuk menghentikannya
-├── README.md              file ini
-├── METHODOLOGY.md         metodologi riset — baca Bagian 1 & 4 kalau waktunya terbatas
-├── FINDINGS.md            hasil lengkap riset forex yang jadi asal metodologinya
-├── reusable/stats.py      bootstrap CI & permutasi drawdown (tidak bergantung pasar)
+├── JALANKAN.bat           double-click to start the app
+├── HENTIKAN.bat           double-click to stop it
+├── README.md              this file
+├── METHODOLOGY.md         research methodology — read sections 1 and 4 if short on time
+├── FINDINGS.md            full results of the forex study the methodology came from
+├── reusable/stats.py      bootstrap CIs and drawdown permutation (market-agnostic)
 └── idx/
-    ├── engine.py          indikator, backtest momentum, peringkat universe
-    ├── screeners.py       7 template screener
-    ├── market.py          daftar Utama, kalender, corporate action
-    ├── news.py            deteksi pergerakan tak wajar, RSS berita, analisis AI
-    ├── updater.py         cek kesegaran data + pembaruan dengan progres
-    ├── stats.py           salinan reusable/stats.py + fungsi berbasis return
-    ├── app/server.py      backend FastAPI
-    ├── dashboard/         frontend React + Vite + Recharts
-    ├── data/              82 CSV harga harian (LQ45 + IDX80)
-    ├── data_index/        IHSG
-    └── experiments/       INDEX.md + eksperimen 001–003
+    ├── engine.py          indicators, momentum backtest, universe ranking
+    ├── screeners.py       the seven screener templates
+    ├── market.py          home lists, calendar, corporate actions
+    ├── news.py            unusual-move detection, news RSS, AI analysis
+    ├── updater.py         data freshness check and refresh with progress
+    ├── stats.py           copy of reusable/stats.py plus return-space functions
+    ├── app/server.py      FastAPI backend
+    ├── dashboard/         React + Vite + Recharts frontend
+    ├── data/              82 daily price CSVs (LQ45 + IDX80)
+    ├── data_index/        IHSG index
+    └── experiments/       INDEX.md and experiments 001–003
 ```
 
-**Baca [`idx/experiments/INDEX.md`](idx/experiments/INDEX.md) duluan** kalau ingin melanjutkan
-risetnya — di situ ada daftar temuan, apa yang sudah diuji, dan apa yang belum.
+**Start with [`idx/experiments/INDEX.md`](idx/experiments/INDEX.md)** if you want to continue the
+research — it lists every finding, what has been tested, and what has not.
+
+> Note: the research documents under `idx/experiments/`, along with `METHODOLOGY.md` and
+> `FINDINGS.md`, are still written in Indonesian. They are working research notes rather than
+> user-facing documentation.
 
 ---
 
-## Catatan penting soal data
+## Data caveats
 
-- Sumber: yfinance (ticker `.JK`), harga sudah disesuaikan split & dividen — terverifikasi bersih
-  (tidak ada lompatan >40% di seluruh universe; BBCA dicek manual di tanggal split 2021-10-13).
-- **Survivorship bias belum dikoreksi**: universe memakai komposisi LQ45 hari ini yang dipakai
-  mundur sampai 2019. Emiten yang delisting tidak ada di sini.
-- Daftar top gainer/loser dihitung dari 82 saham yang datanya tersimpan, **bukan** dari seluruh
-  ~900 emiten IDX — jadi bukan top gainer bursa yang sesungguhnya.
-- Backtest belum memodelkan suspensi saham maupun slippage.
-
----
-
-## Riset asal (forex)
-
-Metodologi proyek ini berasal dari riset EA MetaTrader 5 (EURUSDm M15, 32 eksperimen) yang
-filenya ada di repo sebelah:
-
-- [`../ian-skills/mt5-ea/experiments/INDEX.md`](../ian-skills/mt5-ea/experiments/INDEX.md) — 41 temuan bernomor
-- [`../ian-skills/mt5-ea/quant-engine/`](../ian-skills/mt5-ea/quant-engine/) — engine backtest + analisis
-
-Status riset forex: kandidat final PF ~1,73 (8 tahun, CI [1,05–2,49]), win rate ~59%, drawdown
-perencanaan ~7%. **Belum pernah forward test di akun live.** Akun demo: 463928352 @
-Exness-MT5Trial17.
-
-Satu temuan dari riset itu **tereplikasi di saham IDX**: memilih parameter dari data masa lalu
-justru kalah dari mematoknya tetap (+59,3% vs +87,3%). Itu sebabnya aplikasi ini sengaja tidak
-punya tombol "auto-optimize".
+- Source is yfinance (`.JK` tickers), split- and dividend-adjusted. Verified clean: no single-day
+  jump above 40% anywhere in the universe, and BBCA was checked by hand around its 2021-10-13
+  split.
+- **Survivorship bias is not corrected.** The universe uses today's LQ45 membership applied
+  backwards to 2019, so delisted companies are missing.
+- Top gainer and loser lists are computed from the 82 stocks stored locally, **not** from all
+  ~900 IDX listings — so they are not the exchange's true movers.
+- Backtests model neither trading suspensions nor slippage.
 
 ---
 
-Bukan rekomendasi investasi. Semua angka di sini hasil backtest, dan backtest bukan masa depan.
+## Origin: the forex study
+
+The methodology comes from a MetaTrader 5 EA study (EURUSDm M15, 32 experiments) kept in a
+neighbouring repository:
+
+- `../ian-skills/mt5-ea/experiments/INDEX.md` — 41 numbered findings
+- `../ian-skills/mt5-ea/quant-engine/` — backtest engine and analysis
+
+Its final candidate reached a profit factor of ~1.73 over eight years (CI [1.05–2.49]), a ~59%
+win rate, and ~7% planning drawdown. **It was never forward-tested on a live account.**
+
+One finding from that study **replicated on Indonesian stocks**: picking parameters from past
+data performed worse than fixing them (+59.3% vs +87.3%). That is why this app deliberately has
+no "auto-optimize" button.
+
+---
+
+Not investment advice. Every number here comes from a backtest, and a backtest is not the future.
