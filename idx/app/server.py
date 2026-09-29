@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import engine  # noqa: E402
 import market  # noqa: E402
 import news  # noqa: E402
+import updater  # noqa: E402
 import screeners  # noqa: E402
 from stats import bootstrap_metrics, permute_drawdown_returns  # noqa: E402
 
@@ -61,6 +62,21 @@ def screen(lookback: int = 6, top_n: int = 9):
     lookback = max(1, min(24, lookback))
     top_n = max(1, min(30, top_n))
     return engine.screen(lookback_months=lookback, top_n=top_n)
+
+
+@api.get("/api/data/freshness")
+def data_freshness():
+    return updater.freshness()
+
+
+@api.post("/api/data/update")
+def data_update():
+    return updater.start_update()
+
+
+@api.get("/api/data/update/status")
+def data_update_status():
+    return {**updater.status(), "freshness": updater.freshness()}
 
 
 @api.get("/api/briefing")

@@ -11,64 +11,84 @@ screener, hanya satu yang terbukti mengalahkan beli-tahan pasif.
 
 ## Cara menjalankan
 
-Aplikasi ini butuh **dua server berjalan bersamaan**, jadi siapkan **dua jendela terminal**
-(Command Prompt atau PowerShell — perintah di bawah sama untuk keduanya).
+### Klik dua kali `JALANKAN.bat`
 
-> ⚠️ **Gunakan backslash `\`, bukan garis miring `/`.** Command Prompt akan menolak
-> `.venv/Scripts/python.exe` dengan pesan `'.venv' is not recognized as an internal or
-> external command`.
+Itu saja. File itu mengurus semuanya:
 
-### Terminal 1 — Backend (port 8000)
+1. Cek Python & Node.js sudah terpasang (kalau belum, diberi tahu link unduhannya)
+2. Menyiapkan Python environment dan dependensi tampilan — **otomatis, hanya sekali**
+3. Menarik data harga saham kalau belum ada
+4. Menghentikan sisa server lama yang masih nyangkut
+5. Menjalankan kedua server
+6. Membuka browser ke aplikasinya
 
-**Langkah 1.** Masuk ke folder `idx`:
+Dua jendela kecil akan muncul di taskbar (**Server Data** dan **Server Tampilan**).
+**Jangan ditutup** selama memakai aplikasi — itu mesin yang menjalankan semuanya.
+
+**Untuk berhenti:** klik dua kali `HENTIKAN.bat`.
+
+Kalau baru pertama kali, langkah 2–3 butuh ~5 menit. Setelah itu tiap kali dijalankan hanya
+butuh beberapa detik.
+
+### Alternatif: jalankan manual
+
+Kalau ingin melihat log-nya langsung atau `JALANKAN.bat` bermasalah, buka **dua** jendela
+Command Prompt / PowerShell:
+
+**Jendela 1** — server data:
 
 ```
 cd D:\github-repos\quant-research\idx
-```
-
-**Langkah 2.** Jalankan server:
-
-```
 .venv\Scripts\python.exe -m uvicorn app.server:api --port 8000 --reload
 ```
 
-**Langkah 3.** Tunggu sampai muncul baris ini:
-
-```
-INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-```
-
-Biarkan jendela ini terbuka. Kalau ditutup, aplikasi berhenti bekerja.
-
-### Terminal 2 — Frontend (port 5173)
-
-**Langkah 4.** Buka jendela terminal **baru**, masuk ke folder `dashboard`:
+**Jendela 2** — server tampilan:
 
 ```
 cd D:\github-repos\quant-research\idx\dashboard
-```
-
-**Langkah 5.** Jalankan:
-
-```
 npm run dev
 ```
 
-**Langkah 6.** Tunggu sampai muncul:
+Lalu buka **http://localhost:5173**. Hentikan dengan `Ctrl + C` di masing-masing jendela.
+
+> ⚠️ Pakai backslash `\`, bukan garis miring `/`. Command Prompt menolak
+> `.venv/Scripts/python.exe` dengan pesan `'.venv' is not recognized as an internal or
+> external command`.
+
+> Kalau memakai Claude Code, kedua server terdaftar di `.claude/launch.json` sebagai
+> `idx-api` dan `idx-app`.
+
+---
+
+## Data harga: pemberitahuan & tombol perbarui
+
+Data harga disimpan sebagai file CSV di komputer Anda, **tidak** ikut segar dengan sendirinya.
+
+Aplikasi mengeceknya otomatis setiap kali dibuka. Kalau tertinggal, muncul banner di bagian
+atas:
+
+> **Data yang tampil bukan yang terbaru**
+> Data terakhir 7 Sep 2026 (22 hari lalu) — tertinggal 15 hari bursa
+> [ **Perbarui sekarang** ] [ Nanti saja ]
+
+Klik **Perbarui sekarang**, lalu tunggu — progresnya tampil langsung (`52 dari 83 · BBRI`).
+Untuk 82 saham butuh ~2 menit. Setelah selesai, klik **Muat ulang tampilan**.
+
+Banner hanya muncul kalau memang tertinggal; kalau data sudah segar, ia tidak mengganggu.
+
+Cara menghitungnya: aplikasi membandingkan tanggal data terakhir dengan hari bursa terakhir
+yang wajar sudah ada (Senin–Jumat, dan hari ini baru dihitung setelah jam 17.00 karena bursa
+tutup 15.49 WIB). Hari libur nasional tidak diketahui aplikasi — jadi banner bisa muncul di
+hari libur panjang meski datanya sebenarnya sudah paling baru. Itu sebabnya teksnya menyebut
+"data terakhir tanggal sekian", bukan mengklaim data pasti basi.
+
+Kalau lebih suka lewat terminal:
 
 ```
-  VITE v8.x.x  ready in xxx ms
-  ➜  Local:   http://localhost:5173/
+cd D:\github-repos\quant-research\idx
+.venv\Scripts\python.exe download_data.py
+.venv\Scripts\python.exe download_extra.py
 ```
-
-### Terminal 3 — tidak perlu
-
-**Langkah 7.** Buka browser ke **http://localhost:5173**
-
-Selesai. Untuk menghentikan: tekan `Ctrl + C` di masing-masing jendela terminal.
-
-> Kalau memakai Claude Code, kedua server sudah terdaftar di `.claude/launch.json` sebagai
-> `idx-api` dan `idx-app`, jadi bisa dijalankan lewat preview tanpa mengetik apapun.
 
 ---
 
@@ -142,17 +162,6 @@ npm install
 
 Setelah itu kembali ke bagian **Cara menjalankan** di atas.
 
-### Memperbarui data harga
-
-Data harga tersimpan sebagai CSV dan **tidak** ikut diperbarui otomatis. Kapan pun ingin data
-terbaru, hentikan server lalu jalankan ulang:
-
-```
-cd D:\github-repos\quant-research\idx
-.venv\Scripts\python.exe download_data.py
-.venv\Scripts\python.exe download_extra.py
-```
-
 ---
 
 ## Isi aplikasi
@@ -218,6 +227,8 @@ bukan mengarang sebab.
 
 ```
 quant-research/
+├── JALANKAN.bat           ← klik dua kali untuk menjalankan aplikasi
+├── HENTIKAN.bat           ← klik dua kali untuk menghentikannya
 ├── README.md              file ini
 ├── METHODOLOGY.md         metodologi riset — baca Bagian 1 & 4 kalau waktunya terbatas
 ├── FINDINGS.md            hasil lengkap riset forex yang jadi asal metodologinya
@@ -227,6 +238,7 @@ quant-research/
     ├── screeners.py       7 template screener
     ├── market.py          daftar Utama, kalender, corporate action
     ├── news.py            deteksi pergerakan tak wajar, RSS berita, analisis AI
+    ├── updater.py         cek kesegaran data + pembaruan dengan progres
     ├── stats.py           salinan reusable/stats.py + fungsi berbasis return
     ├── app/server.py      backend FastAPI
     ├── dashboard/         frontend React + Vite + Recharts

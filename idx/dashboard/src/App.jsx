@@ -7,6 +7,7 @@ import Sensitivity from "./views/Sensitivity";
 import Calendar from "./views/Calendar";
 import Research from "./views/Research";
 import TickerSearch from "./components/TickerSearch";
+import DataFreshness from "./components/DataFreshness";
 
 const TABS = [
   { id: "utama", label: "Utama" },
@@ -55,6 +56,8 @@ export default function App() {
       </header>
 
       <main style={{ maxWidth: 1180, margin: "0 auto", padding: "24px 20px 60px" }}>
+        <DataFreshness />
+
         {ticker ? (
           <StockDetail ticker={ticker} onBack={closeDetail} onSelect={setTicker} />
         ) : (
